@@ -6,7 +6,7 @@ How to use the PasswordHasher class
 
 Convert string or number with Hash :
 
-public ResultRegisterUsersDto Execute(RequestRegisterUsersDto request)
+        public ResultRegisterUsersDto Execute(RequestRegisterUsersDto request)
         {
             var passwordHasher = new PasswordHasher();
             var hashedPassword = passwordHasher.HashPassword(request.Password); //User input 
@@ -29,7 +29,7 @@ public ResultRegisterUsersDto Execute(RequestRegisterUsersDto request)
 ----------------------------------------
 How to compare the user's password with the password stored in the database 
 
-public ResultLoginUserDto Execute(RequestLoginUserDto request)
+        public ResultLoginUserDto Execute(RequestLoginUserDto request)
         {
             var user = _context.Users
                 .Where(p => p.Email.Equals(request.Email))
